@@ -31,6 +31,9 @@ jobs:
       - aws-cli/setup
       - eb/setup
       - run:
+          command: |
+            export NODE_OPTIONS=--openssl-legacy-provider
+      - run:
           name: Back-End Install
           command: |
             npm run backend:install
